@@ -56,7 +56,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background-image: url('farm.png'); /* Use farm.png instead of farm.jpg */
+  background-image: url('farm.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,12 +72,13 @@ nav ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
 }
 
 .hero p {
