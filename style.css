@@ -8,43 +8,50 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #fffdd0; /* Soft cream background */
+  background-color: #fffdd0;
   color: #333;
+  font-size: 16px; /* Base font size for mobile */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 15px; /* Responsive padding on mobile */
 }
 
 /* Header */
 header {
-  background-color: #6b8e23; /* Soft green */
+  background-color: #6b8e23;
   padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allows nav to wrap on small screens */
+  gap: 10px;
 }
 
 /* Logo and Company Name */
 .logo-and-name {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
+  flex: 1;
 }
 
 .logo img {
-  height: 60px;
+  height: 50px;
 }
 
 .company-name h2 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin: 0;
-  color: #000; /* Black */
+  color: #000;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -56,34 +63,43 @@ header .container {
   font-style: italic;
 }
 
+/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
-}
-
-nav ul li {
-  margin-left: 20px;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex: 1;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  font-size: 1rem;
+  padding: 5px 8px;
+  border-radius: 4px;
 }
 
 nav ul li a:hover {
-  color: #ff8c00; /* Deep orange accent */
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Hero Section */
 .hero {
-  background-image: url('farm.png');
+  background-image: url('eggs.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
   text-align: center;
-  padding: 100px 0;
+  padding: 80px 20px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero .container {
@@ -92,23 +108,25 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .cta-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #ff8c00;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 1.1rem;
   transition: background-color 0.3s ease;
 }
 
@@ -118,18 +136,23 @@ nav ul li a:hover {
 
 /* Products Section */
 .products {
-  padding: 50px 0;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .products h2 {
   font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+.products p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
@@ -139,22 +162,33 @@ nav ul li a:hover {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
 }
 
 .product-card img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .product-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 10px 0;
+}
+
+.product-card p {
+  margin: 10px 0;
+  color: #555;
 }
 
 /* About Us Section */
 .about {
-  padding: 50px 0;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -163,9 +197,16 @@ nav ul li a:hover {
   margin-bottom: 20px;
 }
 
+.about p {
+  max-width: 800px;
+  margin: 0 auto 15px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
 /* Contact Us Section */
 .contact {
-  padding: 50px 0;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -175,28 +216,31 @@ nav ul li a:hover {
 }
 
 .contact form {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
 .contact form input,
 .contact form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 14px;
   margin: 10px 0;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
 }
 
 .contact form button {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 14px;
   background-color: #ff8c00;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -206,8 +250,9 @@ nav ul li a:hover {
 }
 
 .contact-info {
-  margin-top: 20px;
-  font-size: 1.2rem;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* Footer */
@@ -215,7 +260,8 @@ footer {
   background-color: #6b8e23;
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 15px;
+  font-size: 0.95rem;
 }
 
 /* WhatsApp Button */
@@ -225,10 +271,14 @@ footer {
   right: 20px;
   background-color: #25d366;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 18px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 0.95rem;
 }
 
 .whatsapp-button:hover {
@@ -237,5 +287,71 @@ footer {
 
 .whatsapp-button img {
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: 8px;
+  width: 24px;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-and-name {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 5px 0;
+    margin: 0;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .products h2,
+  .about h2,
+  .contact h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* Extra small devices (phones, less than 480px) */
+@media (max-width: 480px) {
+  .company-name h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .product-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .whatsapp-button {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+
+  .whatsapp-button img {
+    width: 20px;
+  }
 }
