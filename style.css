@@ -6,10 +6,10 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f8f5f2; /* Soft cream background */
-  color: #1a1a1a; /* Dark gray text */
+  color: #333;
+  background-color: #fffdd0; /* Soft cream background */
 }
 
 .container {
@@ -18,11 +18,10 @@ body {
   padding: 0 20px;
 }
 
-/* Header Styles */
+/* Header */
 header {
-  background-color: #fffdd0; /* Soft cream background */
-  padding: 15px 0;
-  border-bottom: 1px solid #e0e0e0;
+  background-color: #6b8e23; /* Soft green */
+  padding: 10px 0;
 }
 
 header .container {
@@ -31,62 +30,33 @@ header .container {
   align-items: center;
 }
 
-/* Logo & Company Name Group */
-.logo-and-name {
-  display: flex;
-  align-items: center;
-  gap: 12px; /* Space between logo and text */
-}
-
 .logo img {
   height: 50px;
 }
 
-.company-name {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #000; /* Pure black */
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-}
-
-/* Navigation */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+}
+
+nav ul li {
+  margin-left: 20px;
 }
 
 nav ul li a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #6B8E23; /* Green hover effect */
+  color: #ff8c00; /* Deep orange accent */
 }
 
 /* Hero Section */
 .hero {
-  background-image: url('farm.png');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  padding: 100px 0;
-}
-.hero .container {
-  position: relative;
-  z-index: 1;
-}
-
-/* Hero Section Styles */
-.hero {
-  background-image: url('farm.png');
+  background-image: url('farm.png'); /* Use farm.png instead of farm.jpg */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -95,7 +65,6 @@ nav ul li a:hover {
   color: #fff; /* White text for better contrast */
 }
 
-/* Optional: Add a subtle overlay for better readability */
 .hero::before {
   content: '';
   position: absolute;
@@ -132,93 +101,15 @@ nav ul li a:hover {
 }
 
 /* About Us Section */
-.about {
+.about-us {
   padding: 50px 0;
   text-align: center;
 }
 
-.about h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* Products Section */
-.products {
-  padding: 50px 0;
-  text-align: center;
-}
-
-.products h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.product-card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.product-card h3 {
-  font-size: 1.5rem;
-  margin: 10px 0;
-}
-
-/* Why Choose Us Section */
-.why-choose-us {
-  padding: 50px 0;
-  text-align: center;
-}
-
-.why-choose-us h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.feature {
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.feature:hover {
-  transform: scale(1.05);
-}
-
-.feature i {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.feature h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.feature p {
-  font-size: 1rem;
+.about-us p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* Contact Us Section */
@@ -270,8 +161,8 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-  background-color: #fff;
-  color: #333;
+  background-color: #6b8e23;
+  color: #fff;
   text-align: center;
   padding: 20px 0;
 }
@@ -281,16 +172,18 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366;
+  background-color: #25D366;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
-  cursor: pointer;
+  font-weight: bold;
   transition: background-color 0.3s ease;
+  cursor: pointer;
+  z-index: 999;
 }
 
 .whatsapp-button:hover {
-  background-color: #28c76f;
+  background-color: #28C76F;
 }
 
 .whatsapp-button img {
