@@ -21,7 +21,7 @@ body {
 /* Header */
 header {
   background-color: #6b8e23; /* Soft green */
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 header .container {
@@ -30,8 +30,30 @@ header .container {
   align-items: center;
 }
 
+/* Logo and Company Name */
+.logo-and-name {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .logo img {
-  height: 50px;
+  height: 60px;
+}
+
+.company-name h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #000; /* Black */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.company-name p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #fff;
+  font-style: italic;
 }
 
 nav ul {
@@ -56,13 +78,17 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background-image: url('farm.png'); /* Use farm.png instead of farm.jpg */
+  background-image: url('eggs.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  padding: 100px 0;
+  color: #fff;
   text-align: center;
-  color: #fff; /* White text for better contrast */
+  padding: 100px 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -127,15 +153,14 @@ nav ul li a:hover {
 }
 
 /* About Us Section */
-.about-us {
+.about {
   padding: 50px 0;
   text-align: center;
 }
 
-.about-us p {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 /* Contact Us Section */
@@ -198,18 +223,16 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25D366;
+  background-color: #25d366;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
   cursor: pointer;
-  z-index: 999;
+  transition: background-color 0.3s ease;
 }
 
 .whatsapp-button:hover {
-  background-color: #28C76F;
+  background-color: #28c76f;
 }
 
 .whatsapp-button img {
