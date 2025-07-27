@@ -72,7 +72,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background-image: url('weggs.jpg');
+  background-image: url('farm.png');
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -82,6 +82,19 @@ nav ul li a:hover {
 .hero .container {
   position: relative;
   z-index: 1;
+}
+
+/* Hero Image Styles */
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Optional: Center the image */
+.hero .container {
+  text-align: center;
 }
 
 .hero h1 {
