@@ -84,19 +84,27 @@ nav ul li a:hover {
   z-index: 1;
 }
 
-/* Hero Image Styles */
-.hero-image {
+/* Hero Section Styles */
+.hero {
+  background-image: url('farm.jpg');
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 100px 0; /* Adds vertical spacing */
+  text-align: center; /* Centers the text */
+  color: #fff; /* White text for better contrast against the background */
+}
+
+/* Optional: If you want a subtle overlay for better readability */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 20px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
 }
-
-/* Optional: Center the image */
-.hero .container {
-  text-align: center;
-}
-
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
