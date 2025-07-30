@@ -114,7 +114,7 @@ nav ul li a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: brightness(0.7); /* Slight dim for better text readability */
+  filter: brightness(0.9); /* Slight dim for better text readability */
   z-index: -1;
 }
 
