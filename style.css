@@ -21,8 +21,9 @@ body {
 
 /* Header */
 header {
-  background-color: #6b8e23;
+  background-color: #fff; /* White background */
   padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0; /* Light border for clean look */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -32,7 +33,7 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Allows nav to wrap on small screens */
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -49,17 +50,17 @@ header .container {
 }
 
 .company-name h2 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin: 0;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: #000; /* Black */
+  font-weight: 600;
+  text-transform: none; /* No uppercase */
 }
 
 .company-name p {
   margin: 0;
-  font-size: 0.9rem;
-  color: #fff;
+  font-size: 0.95rem;
+  color: olive; /* Olive green */
   font-style: italic;
 }
 
@@ -69,23 +70,24 @@ nav ul {
   display: flex;
   margin: 0;
   padding: 0;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: flex-end;
   flex: 1;
 }
 
 nav ul li a {
-  color: #fff;
+  color: #000; /* Black text for all links */
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 1.05rem;
   padding: 5px 8px;
   border-radius: 4px;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  color: #6b8e23; /* Soft green on hover */
 }
 
 /* Hero Section - Now with Guaranteed Image Visibility */
