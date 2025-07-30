@@ -77,9 +77,9 @@ nav ul {
 }
 
 nav ul li a {
-  color: #000; /* Black text for all links */
+  color: #000; /* Black text */
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold; /* This makes the text BOLD */
   font-size: 1.05rem;
   padding: 5px 8px;
   border-radius: 4px;
